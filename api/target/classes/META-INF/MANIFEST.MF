@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1438788266550
+Build-Jdk: 1.7.0_55
+Built-By: icarocamelo
+Bundle-ManifestVersion: 2
+Bundle-Name: multifunctional-api
+Bundle-SymbolicName: org.opendaylight.multifunctional.api
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifu
+ nctional.rev150804;version="1.0.0";uses:="com.google.common.collect,org
+ .opendaylight.yangtools.concepts,org.opendaylight.yangtools.yang.bindin
+ g,org.opendaylight.yangtools.yang.common"
+Import-Package: com.google.common.base;version="[18.0,19)",com.google.co
+ mmon.collect;version="[18.0,19)",org.opendaylight.yangtools.concepts;ve
+ rsion="[0.7,1)",org.opendaylight.yangtools.yang.binding;version="[0.7,1
+ )",org.opendaylight.yangtools.yang.common;version="[0.7,1)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-2.3.0.201405100607

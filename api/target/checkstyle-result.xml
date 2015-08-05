@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.8">
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/$YangModelBindingProvider.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="3" severity="warning" message="Line is longer than 120 characters (found 122)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="3" column="20" severity="warning" message="Type name &apos;$YangModelBindingProvider&apos; must match pattern &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+<error line="5" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/$YangModuleInfoImpl.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="7" column="20" severity="warning" message="Type name &apos;$YangModuleInfoImpl&apos; must match pattern &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+<error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/DisplayString.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="15" severity="warning" message="class def child at indentation level 1 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="17" column="36" severity="warning" message="Member name &apos;_value&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="27" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="28" column="43" severity="warning" message="Parameter name &apos;_value&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="31" severity="warning" message="if rcurly at indentation level 12 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="49" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="53" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="82" column="18" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="90" severity="warning" message="Line is longer than 120 characters (found 195)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="101" severity="warning" message="if rcurly at indentation level 9 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/HpMultifunctional.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="8" severity="warning" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="23" severity="warning" message="class def lcurly at indentation level 1 not at correct indentation, 0" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="23" column="2" severity="warning" message="&apos;{&apos; should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="27" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/Multifunctional.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="11" severity="warning" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="29" severity="warning" message="Line is longer than 120 characters (found 156)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="63" severity="warning" message="Line is longer than 120 characters (found 160)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="65" column="13" severity="warning" message="&apos;{&apos; should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/MultifunctionalBuilder.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="17" severity="warning" message="Line is longer than 120 characters (found 130)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="22" severity="warning" message="Line is longer than 120 characters (found 149)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="22" column="55" severity="warning" message="GenericWhitespace &apos;&lt;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
+<error line="24" column="27" severity="warning" message="Member name &apos;_multifunctionalManufacturer&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="32" column="27" severity="warning" message="Member name &apos;_multifunctionalModelNumber&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="40" column="35" severity="warning" message="Member name &apos;_multifunctionalStatus&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="42" severity="warning" message="Line is longer than 120 characters (found 285)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="44" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="47" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="58" severity="warning" message="Line is longer than 120 characters (found 249)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="58" column="132" severity="warning" message="WhitespaceAround: &apos;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="66" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="70" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="74" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="78" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="79" severity="warning" message="Line is longer than 120 characters (found 184)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="86" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="97" column="43" severity="warning" message="Method name &apos;_multifunctionalManufacturer_length&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9_]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="103" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="114" column="43" severity="warning" message="Method name &apos;_multifunctionalModelNumber_length&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9_]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="120" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="125" severity="warning" message="Line is longer than 120 characters (found 320)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="125" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="138" severity="warning" message="Line is longer than 120 characters (found 204)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="138" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="145" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="151" severity="warning" message="Line is longer than 120 characters (found 150)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="155" column="37" severity="warning" message="Member name &apos;_multifunctionalManufacturer&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="156" column="37" severity="warning" message="Member name &apos;_multifunctionalModelNumber&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="157" column="45" severity="warning" message="Member name &apos;_multifunctionalStatus&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="159" severity="warning" message="Line is longer than 120 characters (found 297)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="166" severity="warning" message="case child at indentation level 12 not at correct indentation, 16" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="167" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="168" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="169" severity="warning" message="case child at indentation level 12 not at correct indentation, 16" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="170" severity="warning" message="Line is longer than 120 characters (found 322)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="170" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="171" severity="warning" message="Line is longer than 120 characters (found 326)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="171" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="172" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="173" severity="warning" message="case child at indentation level 12 not at correct indentation, 16" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="174" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="195" severity="warning" message="Line is longer than 120 characters (found 188)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="213" severity="warning" message="Line is longer than 120 characters (found 125)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="214" severity="warning" message="Line is longer than 120 characters (found 123)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="231" severity="warning" message="Line is longer than 120 characters (found 168)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="234" severity="warning" message="Line is longer than 120 characters (found 207)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="239" column="22" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="246" column="22" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="253" column="22" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="263" column="26" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="268" severity="warning" message="Line is longer than 120 characters (found 300)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="268" column="271" severity="warning" message="Local variable name &apos;e&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="283" column="75" severity="warning" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
+<error line="294" severity="warning" message="if rcurly at indentation level 13 not at correct indentation, 12" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="303" severity="warning" message="if rcurly at indentation level 13 not at correct indentation, 12" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="312" severity="warning" message="if rcurly at indentation level 13 not at correct indentation, 12" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/MultifunctionalData.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="8" severity="warning" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="41" severity="warning" message="Line is longer than 120 characters (found 156)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="65" column="1" severity="warning" message="&apos;{&apos; should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/MultifunctionalService.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="30" column="1" severity="warning" message="&apos;{&apos; should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="41" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/MultifunctionalType.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="10" severity="warning" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="15" severity="warning" message="Line is longer than 120 characters (found 152)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="24" severity="warning" message="class def lcurly at indentation level 1 not at correct indentation, 0" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="24" column="2" severity="warning" message="&apos;{&apos; should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="28" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/PrintInput.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="8" severity="warning" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="20" severity="warning" message="Line is longer than 120 characters (found 151)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/icarocamelo/Development/Opendaylight/multifunctional/api/src/main/yang-gen-sal/org/opendaylight/yang/gen/v1/http/inocybe/com/ns/multifunctional/rev150804/PrintInputBuilder.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="15" severity="warning" message="Line is longer than 120 characters (found 125)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="20" severity="warning" message="Line is longer than 120 characters (found 139)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="20" column="50" severity="warning" message="GenericWhitespace &apos;&lt;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
+<error line="22" column="28" severity="warning" message="Member name &apos;_numberOfPages&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="24" severity="warning" message="Line is longer than 120 characters (found 275)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="26" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="29" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="38" severity="warning" message="Line is longer than 120 characters (found 239)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="38" column="127" severity="warning" message="WhitespaceAround: &apos;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="46" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="50" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="51" severity="warning" message="Line is longer than 120 characters (found 179)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="65" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="76" column="43" severity="warning" message="Method name &apos;_numberOfPages_range&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9_]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="82" severity="warning" message="Line is longer than 120 characters (found 305)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="82" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="95" severity="warning" message="Line is longer than 120 characters (found 194)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="95" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="102" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="108" severity="warning" message="Line is longer than 120 characters (found 145)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="112" column="38" severity="warning" message="Member name &apos;_numberOfPages&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="114" severity="warning" message="Line is longer than 120 characters (found 287)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="119" severity="warning" message="case child at indentation level 12 not at correct indentation, 16" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="120" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="121" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="122" severity="warning" message="case child at indentation level 12 not at correct indentation, 16" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="123" severity="warning" message="Line is longer than 120 characters (found 312)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="123" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="124" severity="warning" message="Line is longer than 120 characters (found 316)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="124" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="125" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="126" severity="warning" message="case child at indentation level 12 not at correct indentation, 16" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="127" severity="warning" message="block child at indentation level 16 not at correct indentation, 20" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="138" severity="warning" message="Line is longer than 120 characters (found 183)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="172" severity="warning" message="Line is longer than 120 characters (found 163)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="175" severity="warning" message="Line is longer than 120 characters (found 197)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="180" column="22" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="190" column="26" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="195" severity="warning" message="Line is longer than 120 characters (found 290)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="195" column="261" severity="warning" message="Local variable name &apos;e&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="210" column="75" severity="warning" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
+<error line="221" severity="warning" message="if rcurly at indentation level 13 not at correct indentation, 12" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+</checkstyle>

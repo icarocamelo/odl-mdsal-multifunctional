@@ -1,0 +1,15 @@
+Aug 05, 2015 9:58:43 AM org.apache.karaf.main.Main launch
+INFO: Installing and starting initial bundles
+Aug 05, 2015 9:58:44 AM org.apache.karaf.main.Main launch
+INFO: All initial bundles installed and set to start
+Aug 05, 2015 9:58:44 AM org.apache.karaf.main.lock.SimpleFileLock lock
+INFO: Trying to lock /Users/icarocamelo/Development/Opendaylight/multifunctional/features/target/pax/c0d62bc2-a109-439c-8ffd-7c0397636cda/lock
+Aug 05, 2015 9:58:44 AM org.apache.karaf.main.lock.SimpleFileLock lock
+INFO: Lock acquired
+Aug 05, 2015 9:58:44 AM org.apache.karaf.main.Main$KarafLockCallback lockAquired
+INFO: Lock acquired. Setting startlevel to 100
+2015-08-05 09:58:52,419 | INFO  | (3)-192.168.33.1 | SingleFeatureTest                | 84 - PAXEXAM-PROBE-3a40899a-9537-439b-afd7-2191741c9666 - 0.0.0 | Attempting to add repository file:/Users/icarocamelo/Development/Opendaylight/multifunctional/features/target/classes/features.xml
+2015-08-05 09:58:52,443 | INFO  | (3)-192.168.33.1 | SingleFeatureTest                | 84 - PAXEXAM-PROBE-3a40899a-9537-439b-afd7-2191741c9666 - 0.0.0 | Successfully loaded repository file:/Users/icarocamelo/Development/Opendaylight/multifunctional/features/target/classes/features.xml
+2015-08-05 09:58:52,443 | INFO  | (3)-192.168.33.1 | SingleFeatureTest                | 84 - PAXEXAM-PROBE-3a40899a-9537-439b-afd7-2191741c9666 - 0.0.0 | Attempting to install feature odl-multifunctional-api 1.0.0-SNAPSHOT
+2015-08-05 09:58:53,200 | INFO  | (3)-192.168.33.1 | SingleFeatureTest                | 84 - PAXEXAM-PROBE-3a40899a-9537-439b-afd7-2191741c9666 - 0.0.0 | Successfull installed feature odl-multifunctional-api 1.0.0-SNAPSHOT
+2015-08-05 09:58:53,792 | WARN  | FelixShutdown    | core                             | 80 - org.apache.aries.jmx.core - 1.1.2 | Task rejected for JMX Notification dispatch of event [org.osgi.framework.ServiceEvent[source=[javax.management.MBeanServer]]] - Dispatcher may have been shutdown

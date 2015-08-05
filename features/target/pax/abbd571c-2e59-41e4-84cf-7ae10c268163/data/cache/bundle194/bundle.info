@@ -1,0 +1,6 @@
+194
+wrap:mvn:com.google.protobuf/protobuf-java/2.5.0$overwrite=merge&DynamicImport-Package=org.opendaylight.controller.protobuff.messages.*;org.opendaylight.controller.cluster.raft.protobuff.client.messages.*
+32
+80
+1438783211961
+0
