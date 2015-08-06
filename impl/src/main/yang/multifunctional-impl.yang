@@ -54,7 +54,7 @@ module multifunctional-impl {
                 uses config:service-ref {
                     refine type {
                         mandatory true;
-                        config:required-identity md-sal-binding:binding-async-data-broker;
+                        config:required-identity md-sal-binding:binding-rpc-broker;
                     }
                 }
             }
