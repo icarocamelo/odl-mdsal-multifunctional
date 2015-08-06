@@ -9,8 +9,11 @@ package org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.multifu
 
 import org.opendaylight.controller.md.sal.binding.api.DataBroker;
 import org.opendaylight.controller.md.sal.binding.api.DataChangeListener;
+import org.opendaylight.controller.md.sal.common.api.data.AsyncDataBroker.DataChangeScope;
+import org.opendaylight.controller.md.sal.common.api.data.LogicalDatastoreType;
 import org.opendaylight.controller.sal.binding.api.BindingAwareBroker;
 import org.opendaylight.multifunctional.impl.MultifunctionalProvider;
+//import org.opendaylight.multifunctional.impl.MultifunctionalProvider;
 import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalService;
 import org.opendaylight.yangtools.concepts.ListenerRegistration;
 
@@ -31,21 +34,21 @@ public class MultifunctionalModule extends org.opendaylight.yang.gen.v1.urn.open
     @Override
     public java.lang.AutoCloseable createInstance() {
         MultifunctionalProvider provider = new MultifunctionalProvider();
-        getBrokerDependency().registerProvider(provider);
 
-        //DataBroker dataBrokerService = getDataBrokerDependency();
-        //provider.setDataProvider(dataBrokerService);
+        DataBroker dataBrokerService = getBrokerDependency();
+        provider.setDataProvider(dataBrokerService);
 
         final BindingAwareBroker.RpcRegistration<MultifunctionalService> rpcRegistration = getRpcRegistryDependency()
                 .addRpcImplementation(MultifunctionalService.class, provider);
 
-//        final ListenerRegistration<DataChangeListener> dataChangeListenerRegistration =
-//                dataBrokerService.registerDataChangeListener( MultifunctionalProvider.MULTIFUNCTIONAL_IID, provider );
+        final ListenerRegistration<DataChangeListener> dataChangeListenerRegistration =
+                dataBrokerService.registerDataChangeListener( LogicalDatastoreType.CONFIGURATION,
+                      MultifunctionalProvider.MULTIFUNCTIONAL_IID, provider, DataChangeScope.SUBTREE);
 
         final class AutoCloseableToaster implements AutoCloseable {
             @Override
             public void close() throws Exception {
-                //dataChangeListenerRegistration.close(); //closes the listener registrations (removes it)
+                dataChangeListenerRegistration.close(); //closes the listener registrations (removes it)
             }
         }
 
