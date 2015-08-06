@@ -36,6 +36,16 @@
             description
             "Number of page to be printed.";
           }
+          
+         leaf printDoneness {
+         type uint32 {
+           range "1 .. 10";
+         }
+         default '5';
+         description
+           "This variable controls how well-done is the ensuing toast. It should be on a scale of 1 to 10.
+            Toast made at 10 generally is considered unfit for human consumption; toast made at 1 is warmed lightly.";
+          }
         }
       }
 
@@ -112,8 +122,14 @@
         description
           "This variable indicates the current state of  the multifunctional.";
       }
-
       
-
+      leaf darknessFactor {
+       type uint32;
+       config true;
+       default 1000;
+       description
+         "The darkness factor. Basically, the number of ms to multiple the doneness value by.";
+     }
     }  // container multifunctional
   }  // module multifunctional
+
