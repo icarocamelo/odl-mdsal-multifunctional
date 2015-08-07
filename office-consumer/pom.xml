@@ -63,5 +63,24 @@
    <artifactId>org.osgi.core</artifactId>
   </dependency>
  </dependencies>
+ 
+ <build>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>maven-bundle-plugin</artifactId>
+    <configuration>
+     <instructions>
+      <Export-Package>*</Export-Package>
+      <Import-Package>*</Import-Package>
+     </instructions>
+    </configuration>
+   </plugin>
+   <plugin>
+    <groupId>org.opendaylight.yangtools</groupId>
+    <artifactId>yang-maven-plugin</artifactId>
+   </plugin>
+  </plugins>
+ </build>
 </project>
 

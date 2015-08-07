@@ -15,6 +15,9 @@ import java.util.concurrent.Future;
 
 import org.opendaylight.controller.office.api.OfficeService;
 import org.opendaylight.controller.office.api.PrintType;
+import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalService;
+import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.PrintInput;
+import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.PrintInputBuilder;
 import org.opendaylight.yangtools.yang.common.RpcError;
 import org.opendaylight.yangtools.yang.common.RpcResult;
 import org.opendaylight.yangtools.yang.common.RpcResultBuilder;
@@ -34,14 +37,14 @@ public class OfficeServiceImpl implements OfficeService {
 
     private static final Logger log = LoggerFactory.getLogger( OfficeServiceImpl.class );
 
-//    private final MultifunctionalService printService;
+    private final MultifunctionalService printService;
 
     private final ListeningExecutorService executor =
             MoreExecutors.listeningDecorator(Executors.newCachedThreadPool());
 
-//    public OfficeServiceImpl(MultifunctionalService service) {
-//        this.printService = service;
-//    }
+    public OfficeServiceImpl(MultifunctionalService service) {
+        this.printService = service;
+    }
 
     @Override
     public Future<RpcResult<Void>> createPrint(PrintType printType,
@@ -104,13 +107,12 @@ public class OfficeServiceImpl implements OfficeService {
                                                long doneness ) {
         // Access the MultifunctionalService to make the toast.
 
-//        PrintInput printInput = new PrintInputBuilder()
-//            .setNumberOfPages(numbersOfPages)
-//            .setPrintDoneness(doneness)
-//            .build();
-//
-//        log.info("Printing page(s)...");
-//        return printService.print(printInput );
-        return null;
+        PrintInput printInput = new PrintInputBuilder()
+            .setNumberOfPages(numbersOfPages)
+            .setPrintDoneness(doneness)
+            .build();
+
+        log.info("Printing page(s)...");
+        return printService.print(printInput );
     }
 }
