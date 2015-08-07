@@ -9,7 +9,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
 -->
 <snapshot>
   <required-capabilities>
-        <capability>urn:opendaylight:params:xml:ns:yang:controller:config:office-consumer:impl?module=office-consumer-impl&amp;revision=2014-01-31</capability>
+      <capability>urn:opendaylight:params:xml:ns:yang:controller:config:office-consumer:impl?module=office-consumer-impl&amp;revision=2014-01-31</capability>
       <capability>urn:opendaylight:params:xml:ns:yang:multifunctional:impl?module=multifunctional-impl&amp;revision=2014-12-10</capability>
       <capability>urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding?module=opendaylight-md-sal-binding&amp;revision=2013-10-28</capability>
   </required-capabilities>
@@ -31,7 +31,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
         </module>
         
         <module>
-                 <type xmlns:kitchen="urn:opendaylight:params:xml:ns:yang:controller:config:kitchen-service:impl">
+                 <type xmlns:consumer="urn:opendaylight:params:xml:ns:yang:controller:config:office-consumer:impl">
                     office:office-consumer-impl
                  </type>
                  <name>office-consumer-impl</name>
@@ -39,11 +39,12 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
                     <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-rpc-registry</type>
                     <name>binding-rpc-broker</name>
                  </rpc-registry>
+        </module>
       </modules>
       
       <services xmlns="urn:opendaylight:params:xml:ns:yang:controller:config">
                <service>
-                   <type xmlns:kitchen="urn:opendaylight:params:xml:ns:yang:controller:config:office-consumer:impl">
+                   <type xmlns:consumer="urn:opendaylight:params:xml:ns:yang:controller:config:office-consumer:impl">
                        office:office-consumer
                    </type>
                    <instance>
