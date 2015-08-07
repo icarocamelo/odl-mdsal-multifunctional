@@ -67,6 +67,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
       <artifactId>multifunctional-impl</artifactId>
       <version>${project.version}</version>
     </dependency>
+    
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>multifunctional-impl</artifactId>
@@ -77,6 +78,12 @@ and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>multifunctional-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>office-consumer</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>

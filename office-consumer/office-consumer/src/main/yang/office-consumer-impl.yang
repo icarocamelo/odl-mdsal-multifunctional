@@ -1,0 +1,100 @@
+module office-consumer-impl {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:office.consumer:impl";
+    prefix "office-consumer-impl";
+
+    import config { prefix config; revision-date 2013-04-05; }
+    import opendaylight-md-sal-binding { prefix md-sal-binding; revision-date 2013-10-28;}
+    import rpc-context { prefix rpcx; revision-date 2013-06-17; }
+    
+    description
+        "Service definition for office-consumer project";
+
+    revision "2014-12-10" {
+        description
+            "Initial revision";
+    }
+
+    identity office-consumer {
+        base config:module-type;
+        config:java-name-prefix OfficeConsumer;
+    }
+
+    augment "/config:modules/config:module/config:state" {
+        case office-consumer-impl {
+            when "/config:modules/config:module/config:type = 'office-consumer'";
+
+            leaf pages-printed {
+                type uint32;
+            }
+
+            rpcx:rpc-context-instance "clear-pages-printed-rpc";
+        }
+    }
+    
+    identity clear-pages-printed-rpc;
+    
+    rpc clear-pages-printed {
+        description
+          "JMX call to clear the pages printed counter.";
+
+        input {
+            uses rpcx:rpc-context-ref {
+                refine context-instance {
+                    rpcx:rpc-context-instance clear-pages-printed-rpc;
+                }
+            }
+        }
+    }
+    
+    augment "/config:modules/config:module/config:configuration" {
+        case office-consumer {
+            when "/config:modules/config:module/config:type = 'multifunctional'";
+            container broker {
+                uses config:service-ref {
+                    refine type {
+                        mandatory true;
+                        config:required-identity md-sal-binding:binding-async-data-broker;
+                    }
+                }
+            }
+            //Wires dependent services into this class - in this case the RPC registry service
+           container rpc-registry {
+               uses config:service-ref {
+                   refine type {
+                       mandatory true;
+                       config:required-identity md-sal-binding:binding-rpc-registry;
+                   }
+               }
+           } 
+        }
+    }
+    
+    augment "/config:modules/config:module/config:state" {
+        case office-consumer-impl {
+            when "/config:modules/config:module/config:type = 'office-consumer-impl'";
+
+            rpcx:rpc-context-instance "print-with-fax-rpc";
+        }
+    }
+
+    identity print-with-fax-rpc;
+
+    rpc make-scrambled-with-wheat  {
+        description
+          "Shortcut JMX call to make print and send a fax for testing.";
+
+        input {
+            uses rpcx:rpc-context-ref {
+                refine context-instance {
+                    rpcx:rpc-context-instance print-with-fax-rpc;
+                }
+            }
+        }
+        output {
+            leaf result {
+                type boolean;
+            }
+        }
+    }
+}
