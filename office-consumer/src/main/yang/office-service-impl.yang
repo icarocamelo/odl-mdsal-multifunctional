@@ -21,7 +21,7 @@ module office-service-impl {
     // This is the definition of office service interface identity.
     identity office-service {
         base "config:service-type";
-        config:java-class "org.opendaylight.sample.office.api.officeService";
+        config:java-class "org.opendaylight.controller.office.api.officeService";
     }
 
     // This is the definition of office service implementation module identity. 
