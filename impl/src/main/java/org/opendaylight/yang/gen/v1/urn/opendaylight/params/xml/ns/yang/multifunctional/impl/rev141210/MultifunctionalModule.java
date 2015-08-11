@@ -17,12 +17,20 @@ import org.opendaylight.multifunctional.impl.MultifunctionalProvider;
 import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalService;
 import org.opendaylight.yangtools.concepts.ListenerRegistration;
 
-public class MultifunctionalModule extends org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.multifunctional.impl.rev141210.AbstractMultifunctionalModule {
-    public MultifunctionalModule(org.opendaylight.controller.config.api.ModuleIdentifier identifier, org.opendaylight.controller.config.api.DependencyResolver dependencyResolver) {
+public class MultifunctionalModule
+        extends
+        org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.multifunctional.impl.rev141210.AbstractMultifunctionalModule {
+    public MultifunctionalModule(
+            org.opendaylight.controller.config.api.ModuleIdentifier identifier,
+            org.opendaylight.controller.config.api.DependencyResolver dependencyResolver) {
         super(identifier, dependencyResolver);
     }
 
-    public MultifunctionalModule(org.opendaylight.controller.config.api.ModuleIdentifier identifier, org.opendaylight.controller.config.api.DependencyResolver dependencyResolver, org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.multifunctional.impl.rev141210.MultifunctionalModule oldModule, java.lang.AutoCloseable oldInstance) {
+    public MultifunctionalModule(
+            org.opendaylight.controller.config.api.ModuleIdentifier identifier,
+            org.opendaylight.controller.config.api.DependencyResolver dependencyResolver,
+            org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.multifunctional.impl.rev141210.MultifunctionalModule oldModule,
+            java.lang.AutoCloseable oldInstance) {
         super(identifier, dependencyResolver, oldModule, oldInstance);
     }
 
@@ -35,8 +43,11 @@ public class MultifunctionalModule extends org.opendaylight.yang.gen.v1.urn.open
     public java.lang.AutoCloseable createInstance() {
         MultifunctionalProvider provider = new MultifunctionalProvider();
 
-     // Register runtimeBean for printing statistics via JMX
-        final MultifunctionalRuntimeRegistration runtimeReg = getRootRuntimeBeanRegistratorWrapper().register( provider );
+        provider.setNotificationProvider(getNotificationServiceDependency());
+
+        // Register runtimeBean for printing statistics via JMX
+        final MultifunctionalRuntimeRegistration runtimeReg = getRootRuntimeBeanRegistratorWrapper()
+                .register(provider);
 
         DataBroker dataBrokerService = getBrokerDependency();
         provider.setDataProvider(dataBrokerService);
@@ -44,14 +55,17 @@ public class MultifunctionalModule extends org.opendaylight.yang.gen.v1.urn.open
         final BindingAwareBroker.RpcRegistration<MultifunctionalService> rpcRegistration = getRpcRegistryDependency()
                 .addRpcImplementation(MultifunctionalService.class, provider);
 
-        final ListenerRegistration<DataChangeListener> dataChangeListenerRegistration =
-                dataBrokerService.registerDataChangeListener( LogicalDatastoreType.CONFIGURATION,
-                      MultifunctionalProvider.MULTIFUNCTIONAL_IID, provider, DataChangeScope.SUBTREE);
+        final ListenerRegistration<DataChangeListener> dataChangeListenerRegistration = dataBrokerService
+                .registerDataChangeListener(LogicalDatastoreType.CONFIGURATION,
+                        MultifunctionalProvider.MULTIFUNCTIONAL_IID, provider,
+                        DataChangeScope.SUBTREE);
 
         final class AutoCloseableToaster implements AutoCloseable {
             @Override
             public void close() throws Exception {
-                dataChangeListenerRegistration.close(); //closes the listener registrations (removes it)
+                dataChangeListenerRegistration.close(); // closes the listener
+                                                        // registrations
+                                                        // (removes it)
                 runtimeReg.close();
             }
         }

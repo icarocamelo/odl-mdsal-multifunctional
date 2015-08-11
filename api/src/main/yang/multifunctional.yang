@@ -53,6 +53,36 @@
      description
        "Stop printing.";
     }  
+    
+    rpc restock-multifunctional {
+       description
+         "Restocks the multifunctional with the amount of page specified.";
+       
+  
+       input {
+           leaf amountOfPagesToStock {
+               type uint32;
+               description
+                 "Indicates the amount of page to re-stock";
+           }
+       }
+   }
+   
+   notification multifunctionalOutOfStock {
+     description
+       "Indicates that the multifunctional has run of out stock.";
+   }  // notification multifunctionalOutOfStock
+   
+
+   notification multifunctionalRestocked {
+     description
+       "Indicates that the multifunctional has run of out page.";
+     leaf amountOfPage {
+       type uint32;
+       description
+         "Indicates the amount of page that was re-stocked";
+     }
+   }  // notification toasterRestocked
 
     //declares a base identity, in this case a base type for different types of multifunctional.
     identity multifunctional-type {

@@ -32,9 +32,10 @@ module office-consumer-impl {
     }
 
     augment "/config:modules/config:module/config:configuration" {
-        case office-service-impl {
+        case office-consumer-impl {
             when "/config:modules/config:module/config:type = 'office-consumer-impl'";
 
+            
             container rpc-registry {
                 uses config:service-ref {
                     refine type {
@@ -42,6 +43,43 @@ module office-consumer-impl {
                         config:required-identity mdsal:binding-rpc-registry;
                     }
                 }
+            }
+            
+            container notification-service {
+               uses config:service-ref {
+                   refine type {
+                       mandatory true;
+                       config:required-identity mdsal:binding-notification-service;
+                   }
+               }
+           }
+        }
+    }
+    
+    augment "/config:modules/config:module/config:state" {
+        case office-consumer-impl {
+            when "/config:modules/config:module/config:type = 'office-consumer-impl'";
+
+            rpcx:rpc-context-instance "print-and-send-fax-rpc";
+        }
+    }
+
+    identity print-and-send-fax-rpc;
+
+    rpc print-and-send-fax  {
+        description
+          "Shortcut JMX call to print-and-send-fax for testing.";
+
+        input {
+            uses rpcx:rpc-context-ref {
+                refine context-instance {
+                    rpcx:rpc-context-instance print-and-send-fax-rpc;
+                }
+            }
+        }
+        output {
+            leaf result {
+                type boolean;
             }
         }
     }

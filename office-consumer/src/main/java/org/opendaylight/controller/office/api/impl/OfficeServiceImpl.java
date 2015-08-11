@@ -8,17 +8,27 @@
 
 package org.opendaylight.controller.office.api.impl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import org.opendaylight.controller.office.api.OfficeService;
 import org.opendaylight.controller.office.api.PrintType;
+import org.opendaylight.controller.sal.common.util.RpcErrors;
+import org.opendaylight.controller.sal.common.util.Rpcs;
+import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalListener;
+import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalOutOfStock;
+import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalRestocked;
 import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.MultifunctionalService;
 import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.PrintInput;
 import org.opendaylight.yang.gen.v1.http.inocybe.com.ns.multifunctional.rev150804.PrintInputBuilder;
+import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.config.office.consumer.impl.rev140131.OfficeServiceRuntimeMXBean;
 import org.opendaylight.yangtools.yang.common.RpcError;
+import org.opendaylight.yangtools.yang.common.RpcError.ErrorSeverity;
+import org.opendaylight.yangtools.yang.common.RpcError.ErrorType;
 import org.opendaylight.yangtools.yang.common.RpcResult;
 import org.opendaylight.yangtools.yang.common.RpcResultBuilder;
 import org.slf4j.Logger;
@@ -33,7 +43,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
 
-public class OfficeServiceImpl implements OfficeService {
+public class OfficeServiceImpl implements OfficeService, OfficeServiceRuntimeMXBean, MultifunctionalListener , AutoCloseable {
 
     private static final Logger log = LoggerFactory.getLogger( OfficeServiceImpl.class );
 
@@ -41,6 +51,8 @@ public class OfficeServiceImpl implements OfficeService {
 
     private final ListeningExecutorService executor =
             MoreExecutors.listeningDecorator(Executors.newCachedThreadPool());
+
+    private volatile boolean multifunctionalOutOfPaper;
 
     public OfficeServiceImpl(MultifunctionalService service) {
         this.printService = service;
@@ -103,9 +115,20 @@ public class OfficeServiceImpl implements OfficeService {
         } );
     }
 
+    @SuppressWarnings("deprecation")
     private Future<RpcResult<Void>> print(long numbersOfPages,
                                                long doneness ) {
         // Access the MultifunctionalService to make the toast.
+
+        if( multifunctionalOutOfPaper )
+        {
+            log.info( "We're out of paper but we can send fax" );
+            return Futures.immediateFuture( Rpcs.<Void> getRpcResult( true,
+                       Arrays.asList( RpcErrors.getRpcError( "", "partial-operation", null,
+                                          ErrorSeverity.WARNING,
+                                          "Multifunctional is out of bread but we can send fax",
+                                          ErrorType.APPLICATION, null ) ) ) );
+        }
 
         PrintInput printInput = new PrintInputBuilder()
             .setNumberOfPages(numbersOfPages)
@@ -114,5 +137,46 @@ public class OfficeServiceImpl implements OfficeService {
 
         log.info("Printing page(s)...");
         return printService.print(printInput );
+    }
+
+    @Override
+    public Boolean printAndSendFax() {
+        try {
+            long printDoneness = 5;
+            long numberOfPages = 2;
+
+            // This call has to block since we must return a result to the JMX client.
+            RpcResult<Void> result = print( numberOfPages, printDoneness ).get();
+            if( result.isSuccessful() ) {
+                log.info( "printAndSendFax succeeded" );
+            } else {
+                log.warn( "printAndSendFax failed: " + result.getErrors() );
+            }
+
+            return result.isSuccessful();
+
+        } catch( InterruptedException | ExecutionException e ) {
+            log.warn( "An error occurred while maing breakfast: " + e );
+        }
+
+        return Boolean.FALSE;
+    }
+
+    @Override
+    public void close() throws Exception {
+        executor.shutdown();
+    }
+
+    @Override
+    public void onMultifunctionalOutOfStock(
+            MultifunctionalOutOfStock notification) {
+        log.info( "MultifunctionalOutOfStock notification" );
+        multifunctionalOutOfPaper = true;
+    }
+
+    @Override
+    public void onMultifunctionalRestocked(MultifunctionalRestocked notification) {
+        log.info( "MultifunctionalRestocked notification - amountOfPage: " + notification.getAmountOfPage() );
+        multifunctionalOutOfPaper = false;
     }
 }
