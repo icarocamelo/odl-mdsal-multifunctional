@@ -2,18 +2,18 @@
 <metadata modelVersion="1.1.0">
   <groupId>org.opendaylight.multifunctional</groupId>
   <artifactId>multifunctional-impl</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
-    <lastUpdated>20150804191628</lastUpdated>
+    <lastUpdated>20160226130522</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <classifier>config</classifier>
         <extension>xml</extension>
-        <value>1.0.0-SNAPSHOT</value>
-        <updated>20150804191628</updated>
+        <value>1.0-SNAPSHOT</value>
+        <updated>20160226130522</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

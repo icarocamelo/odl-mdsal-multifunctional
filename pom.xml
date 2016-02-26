@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2015 Inocybe Technologies and others. All rights reserved.
+Copyright (c) 2016 Inocybe Technologies and others. and others. All rights reserved.
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License v1.0 which accompanies this distribution,
 and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
@@ -10,12 +10,12 @@ and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
   <parent>
     <groupId>org.opendaylight.odlparent</groupId>
     <artifactId>odlparent</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
+    <version>1.6.1-SNAPSHOT</version>
   </parent>
 
   <groupId>org.opendaylight.multifunctional</groupId>
   <artifactId>multifunctional-aggregator</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <name>multifunctional</name>
   <packaging>pom</packaging>
   <modelVersion>4.0.0</modelVersion>
